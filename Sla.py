@@ -257,3 +257,22 @@ verifica_nome(lista_nome, pergunta)
 # sla = [1, 2, 3, 4]
 # verifica_impar(sla)
 
+# Carro mais caro
+carros = ['Up', 'Uno', 'Celtinha', 'Kombi', 'Kwid']
+valores = [10, 5, 1000000, 100, 50]
+
+
+def carro_caro(precos):
+    j = 0
+    caro = precos[j]
+    for i in range(len(precos)):
+        if precos[i] > caro:
+            caro = precos[i]
+            j = i
+        else:
+            caro = caro
+    print(f'O carro mais caro é: {carros[j]}\n'
+          f'Ele custa: R${precos[j]}')
+
+
+carro_caro(valores)
