@@ -140,3 +140,120 @@ def verifica_nome(lista, nome):
 pergunta = input('Diga seu nome:\n-> ')
 verifica_nome(lista_nome, pergunta)
 
+# Função para calucular idade
+# def calcula_ideade(ano_nascimento):
+#     cal_idade = 2024 - ano_nascimento
+#     return cal_idade
+#
+#
+# nome = input("Diga seu nome:\n-> ")
+# ano = int(input("Diga em que ano você nasceu:\n-> "))
+# ano = calcula_ideade(ano)
+# print(f"\n{nome}, você tem {ano} anos ")
+
+# Número maior
+# def maior_num(lista):
+#     teste_maior = lista[0]
+#     for i in range(1, (len(lista))):
+#         if teste_maior < lista[i]:
+#             teste_maior = lista[i]
+#     return teste_maior
+#
+#
+# sla = [1, 2, 3, 4]
+# maior = maior_num(sla)
+# print(f"O maior número é o: {maior}")
+#
+# sla2 = [5, 56, 5464, 31321]
+# maior = maior_num(sla2)
+# print(f"O maior número é o: {maior}")
+
+# Proximo minuto
+# def prox_min(h, minu):
+#     if minu >= 59 and h >= 23:
+#         minu = 0
+#         h = 0
+#         return f"O próximo minuto é: 0{h}:0{minu}"
+#     elif minu >= 59:
+#         if h < 10:
+#             return f"O próximo minuto é: 0{h}:0{minu}"
+#         minu = 0
+#         h += 1
+#         return f"O próximo minuto é: {h}:0{minu}"
+#     else:
+#         minu += 1
+#         if h < 10 and minu < 10:
+#             return f"O próximo minuto é: 0{h}:0{minu}"
+#         elif h < 10:
+#             return f"O próximo minuto é: 0{h}:{minu}"
+#         elif minu < 10:
+#             return f"O próximo minuto é: {h}:0{minu}"
+#         return f"O próximo minuto é: {h}:{minu}"
+#
+#
+# hora = int(input("Diga que horas são:\n-> "))
+# while not (0 <= hora < 24):
+#     hora = int(input("Diga que horas são:\n-> "))
+#
+# minuto = int(input("Diga que minutos são:\n-> "))
+# while not(0 <= minuto < 60):
+#     minuto = int(input("Diga que minutos são:\n-> "))
+#
+# proximo_minuto = prox_min(hora, minuto)
+# print(proximo_minuto)
+
+# verifica se é número
+# def verifica_num(num):
+#     while not num.isnumeric():
+#         num = input("Diga um valor válido:\n-> ")
+#     num = int(num)
+#     print(f"O número escolhido foi {num}")
+#
+#
+# numero = input("Diga um número:\n-> ")
+# verifica_num(numero)
+
+# numero de telefone
+# def valida_telefone(num):
+#     while (not num.isnumeric()) or (not (len(num) in [8, 9, 11])):
+#         num = input("Diga um número válido:\n-> ")
+#     return num
+#
+#
+# telefone = input("Diga seu número de telefone:\n-> ")
+# teste = valida_telefone(telefone)
+# print(f"Seu telefone é: {teste}")
+
+# valida carros
+# carros = ['Up', 'Uno', 'Celtinha', 'Kombi', 'Kwid']
+# precos = [10, 5, 1000000, 100, 50]
+#
+# frase = ', '.join(carros)
+#
+# print(f'As opções são: {frase}.')
+# escolha = input('Qual carro você quer ver ?\n-> ')
+# while escolha not in carros:
+#     print(f'Opção inválida !!!\nOpções válidas: {frase}.\n')
+#     escolha = input('Qual carro você quer ver ?\n-> ')
+#
+# j = 0
+# for i in range(len(carros)):
+#     if escolha == carros[i]:
+#         j = i
+#         break
+#
+# print(f'O valor do {escolha} é: R${precos[j]}')
+
+# verifica ímpar
+# def verifica_impar(lista):
+#     imp = 0
+#     for i in range(len(lista)):
+#         if lista[i] % 2 != 0:
+#             imp += 1
+#     print(f"Nessa lista há {imp} ímpares e {len(lista) - imp} pares")
+#     return
+# 
+# 
+# sla = [1, 2, 3, 4]
+# verifica_impar(sla)
+
