@@ -276,3 +276,179 @@ def carro_caro(precos):
 
 
 carro_caro(valores)
+
+# Separador de pares e impares
+# nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+# pares = []
+# imps = []
+# for i in range(len(nums)):
+#     if nums[i] % 2 == 0:
+#         pares.append(nums[i])
+#         continue
+#     imps.append(nums[i])
+#
+#
+# print(nums)
+# print(pares)
+# print(imps)
+
+
+# Lista professores
+# profs = ['Cordeiro', 'Danilo', 'Lucas Silva', 'Lucas Demetrius', 'Jones', 'Ana Claúdia', 'Caio']
+# materias = ['SW & TX', 'Python', 'Front-end', 'Edge', 'Calculo', 'ST & Emp', 'Web']
+# for i in range(len(profs)):
+#     print(f'O(a) prof {profs[i]} leciona : {materias[i]}')
+
+
+# Peça ao usuário um professor de input, verifique se esse professor está na lista.
+# Se estiver, busque o local do professor na lista, print o que o professor escolhido leciona.
+# Caso contráio, mande ele digitar novamente
+# profs = ['Cordeiro', 'Danilo', 'Lucas Silva', 'Lucas Demetrius', 'Jones', 'Ana Claúdia', 'Caio']
+# materias = ['SW & TX', 'Python', 'Front-end', 'Edge', 'Calculo', 'ST & Emp', 'Web']
+# escolha = input('Diga o nome do professor que procura:\n-> ')
+# while not(escolha in profs):
+#     print(f"Não encotramos o '{escolha}', tente novamente")
+#     escolha = input('Diga o nome do professor que procura:\n-> ')
+#
+# for i in range(len(profs)):
+#     if escolha == profs[i]:
+#         print(f'O(a) prof {profs[i]} leciona : {materias[i]}')
+
+
+# Achar o carro mais caro
+# carros = ['Up', 'Uno', 'Celtinha', 'Gol', 'Fusca']
+# precos = [10, 5, 1000000, 100, 5000]
+# ano = [2015, 2001, 2014, 2010, 1970]
+# indice_do_mais_caro = 0
+# mais_caro = precos[indice_do_mais_caro]
+#
+# for i in range(len(precos)):
+#     if precos[i] > mais_caro:
+#         mais_caro = precos[i]
+#         indice_do_mais_caro = i
+# print(f'O carro mais caro é: {carros[indice_do_mais_caro]};\n'
+#       f'Seu ano de fabricação é: {ano[indice_do_mais_caro]};\n'
+#       f'Ele custa: R${precos[indice_do_mais_caro]:.2f}')
+
+
+# Procurar um carro
+# carros = ['Up', 'Uno', 'Celtinha', 'Gol', 'Fusca']
+# precos = [10, 5, 1000000, 100, 5000]
+# ano = [2015, 2001, 2014, 2010, 1970]
+# frase_erro = ', '.join(carros)
+#
+# print(f'As opções são: {frase_erro}.')
+# escolha = input('Qual carro você quer ver ?\n-> ')
+# while escolha not in carros:
+#     print(f'Opção inválida !!!\nOpções válidas: {frase_erro}.\n')
+#     escolha = input('Qual carro você quer ver ?\n-> ')
+#
+# indice_do_mais_caro = 0
+# mais_caro = precos[indice_do_mais_caro]
+#
+# for i in range(len(precos)):
+#     if precos[i] > mais_caro:
+#         mais_caro = precos[i]
+#         indice_do_mais_caro = i
+# print(f'O carro escolhido é: {carros[indice_do_mais_caro]};\n'
+#       f'Seu ano de fabricação é: {ano[indice_do_mais_caro]};\n'
+#       f'Ele custa: R${precos[indice_do_mais_caro]:.2f}')
+
+
+# Começando funções
+# Antes:
+# qnt = input(f'Diga a quantidade de garrafas: ')
+# while not qnt.isnumeric():
+#     print('Errso\nDiga uma opção válida')
+#     qnt = input(f'Diga a quantidade de garrafas: ')
+#
+# idade = input(f'Diga a sua idade: ')
+# while not idade.isnumeric():
+#     print('Errso\nDiga uma opção válida')
+#     idade = input(f'Diga a sua idade: ')
+
+# Depois:
+# def verifica_numero(msg_pergunta, msg_de_erro):
+#     num = input(msg_pergunta)
+#     while not num.isnumeric():
+#         print('Erro')
+#         num = input(msg_de_erro)
+#     return int(num)
+#
+#
+# a = verifica_numero('Diga a quantidade de garrafas:\n-> ', 'Diga uma quantidade válida:\n-> ')
+# print(f'Quantidade de guarrafas selecionadas: {a}')
+# b = verifica_numero('Diga a sua idade:\n-> ', 'Diga uma idade válida:\n-> ')
+# print(f'Sua idade é: {b}')
+
+
+# Procurar algo (com def)
+# def procura_nome(lista_de_opcoes, msg, msg_de_erro, msg_de_acerto):
+#     teste = input(msg)
+#     while not(teste in lista_de_opcoes):
+#         teste = input(msg_de_erro)
+#
+#     for i in range(len(lista_de_opcoes)):
+#         if teste == lista_de_opcoes[i]:
+#             print(msg_de_acerto + teste)
+#     return teste
+#
+#
+# a = procura_nome(['Ana', 'Bia', 'Caio'], 'Diga o nome de um aluno:\n-> ', 'Não achamos este aluno\nTente com outro nome:\n-> ', f'Escontramos o aluno: ')
+
+
+# Função que procura um indice
+# def procura_indice(lista, msg, msg_erro):
+#     elemento_teste = input(msg)
+#     indice = 0
+#     while elemento_teste not in lista:
+#         elemento_teste = input(msg_erro)
+#     for i in range(len(lista)):
+#         if elemento_teste == lista[i]:
+#             indice = i
+#             break
+#     print(f"O elemento {elemento_teste} esta na lista no indice: {indice}.\n")
+#     return indice
+#
+#
+# a = procura_indice(['1', '2', '3', '4'], 'Diga um número:\n-> ', 'Escolha outro número:\n-> ')
+#
+# b = procura_indice(['a', 'b', 'c', 'd'], 'Diga uma letra:\n-> ', 'Escolha outra letra:\n-> ')
+
+# Acha o maior (com def)
+# def verifica_maior_ou_menor(msg, lista):
+#     maior_ou_menor = input(msg)
+#     indice = 0
+#     teste = lista[indice]
+#     if maior_ou_menor == '>':
+#         for i in range(len(lista)):
+#             if lista[i] > teste:
+#                 teste = lista[i]
+#                 indice = i
+#         print(f'O maior elemento é: {teste}')
+#
+#     elif maior_ou_menor == '<':
+#         for i in range(len(lista)):
+#             if lista[i] < teste:
+#                 teste = lista[i]
+#                 indice = i
+#         print(f'O menor elemento é: {teste}')
+#     return indice
+#
+#
+# a = verifica_maior_ou_menor("Você quer saber o menor ou maior ? ('<' ou '>')\n-> ", [1, 2, 3, 4])
+
+# # Inverte uma lista (com def)
+# def inverte_lista(lista):
+#     ultimo = len(lista) - 1
+#     for i in range(len(lista)//2):
+#         aux = lista[i]
+#         lista[i] = lista[(ultimo - i)]
+#         lista[(ultimo - i)] = aux
+#     print(lista)
+#
+#
+# inverte_lista([1, 2, 3, 4])
+# inverte_lista([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+
+
