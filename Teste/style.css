@@ -1,0 +1,96 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+#create-post label,
+#filter label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#create-post input[type="text"],
+#create-post input[type="url"],
+#create-post textarea,
+#filter select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+#create-post button,
+#filter button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+#posts ul {
+    list-style: none;
+    padding: 0;
+}
+
+#posts li {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    position: relative; /* Para posicionar os botões */
+}
+
+.post-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.post-image-carousel {
+    display: none;
+}
+
+.post-image-carousel.active {
+    display: block;
+}
+
+.carousel-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+    position: absolute; /* Para posicionar os botões no post */
+    bottom: 10px; /* Ajuste para a posição desejada */
+    left: 0; /* Ajuste para a posição desejada */
+    width: 100%; /* Ajuste para a largura desejada */
+}
+
+.carousel-buttons button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.edit-delete-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.edit-delete-buttons button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}

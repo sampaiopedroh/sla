@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Rede Social</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Mini Rede Social</h1>
+    </header>
+
+    <main>
+        <section id="create-post">
+            <h2>Criar Post</h2>
+            <form id="post-form">
+                <label for="text">Texto:</label>
+                <textarea id="text" name="text" required></textarea>
+
+                <label for="category">Categoria:</label>
+                <select id="category" name="category">
+                    <option value="Tecnologia">Tecnologia</option>
+                    <option value="Viagem">Viagem</option>
+                    <option value="Comida">Comida</option>
+                </select>
+
+                <label for="image1">Imagem 1:</label>
+                <input type="url" id="image1" name="image1" placeholder="URL da imagem">
+
+                <label for="image2">Imagem 2:</label>
+                <input type="url" id="image2" name="image2" placeholder="URL da imagem">
+
+                <label for="image3">Imagem 3:</label>
+                <input type="url" id="image3" name="image3" placeholder="URL da imagem">
+
+                <button type="submit">Postar</button>
+            </form>
+        </section>
+
+        <section id="filter">
+            <h2>Filtrar Posts</h2>
+            <select id="filter-category">
+                <option value="">Todas as categorias</option>
+                <option value="Tecnologia">Tecnologia</option>
+                <option value="Viagem">Viagem</option>
+                <option value="Comida">Comida</option>
+            </select>
+        </section>
+
+        <section id="posts">
+            <h2>Posts</h2>
+            <ul id="post-list"></ul>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
