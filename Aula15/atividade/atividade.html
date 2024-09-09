@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Estilos gerais para a página */
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap; /* Permite que as caixas quebrem para a próxima linha */
+            gap: 20px;
+        }
+
+        /* Estilos básicos para as caixas redimensionáveis */
+        .resizable-box {
+            background-color: #4caf50;
+            padding: 10px;
+            border-radius: 8px;
+            resize: both; /* Permite redimensionamento horizontal e vertical */
+            overflow: hidden;
+            /* Evita que o conteúdo extrapole a caixa */
+            border: 2px solid #388e3c;
+            min-width: 150px;
+            min-height: 100px; /* Define altura mínima */
+            max-width: 100%; /* Permite que a caixa ocupe toda a largura do container */
+        }
+
+        /* Estilos para o conteúdo das caixas */
+        .content {
+            font-size: 14px;
+            color: white;
+        }
+
+        /* Container query para diferentes tamanhos das caixas */
+        @container (min-width: 400px) {
+            .resizable-box {
+                min-width: 250px;
+                min-height: 200px;
+            }
+
+            .content {
+                font-size: 18px;
+            }
+        }
+
+        /* Estilos específicos para caixas de texto */
+        .text-box {
+            background-color: #2196F3;
+            /* Azul */
+            border: 2px solid #1976D2;
+            /* Azul mais escuro */
+            color: #fff;
+        }
+
+        /* Estilos específicos para caixas de imagem */
+        .image-box {
+            background-color: #FFC107;
+            /* Amarelo */
+            border: 2px solid #FFA000;
+            /* Amarelo mais escuro */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image-box img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        /* Estilos específicos para caixas de vídeo */
+        .video-box {
+            background-color: #f44336;
+            /* Vermelho */
+            border: 2px solid #d32f2f;
+            /* Vermelho mais escuro */
+            position: relative;
+            padding-bottom: 56.25%; /* Proporção 16:9 para vídeos */
+        }
+
+        .video-box iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="resizable-box text-box">
+            <div class="content">
+                <h2>Título da caixa de texto</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate aspernatur, deserunt quidem
+                    molestiae, fugiat voluptas, vero officia eaque magni doloremque commodi. Molestias quasi, reiciendis
+                    aperiam id, quisquam nihil necessitatibus corrupti cumque?</p>
+            </div>
+        </div>
+        <div class="resizable-box image-box">
+            <img src="https://picsum.photos/200/150" alt="Imagem da caixa">
+        </div>
+        <div class="resizable-box video-box">
+            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+        <div class="resizable-box text-box">
+            <div class="content">
+                <h2>Título da caixa de texto</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate aspernatur, deserunt quidem
+                    molestiae, fugiat voluptas, vero officia eaque magni doloremque commodi. Molestias quasi, reiciendis
+                    aperiam id, quisquam nihil necessitatibus corrupti cumque?</p>
+            </div>
+        </div>
+        <div class="resizable-box image-box">
+            <img src="https://picsum.photos/200/150" alt="Imagem da caixa">
+        </div>
+        <div class="resizable-box video-box">
+            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+    </div>
+</body>
+
+</html>
