@@ -1,8 +1,0 @@
-/* definindo (padrao) */
-:root {--color: red;}
-/* definindo (apenas em uma classe) */
-.opaa {--color: green;}
-/* definindo (apenas um elemento especifico) */
-#opaa {--color: blue;}
-/* aplicando para todo mundo */
-* {color: var(--color);}
